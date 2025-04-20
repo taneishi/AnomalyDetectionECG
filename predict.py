@@ -36,7 +36,7 @@ def plot_predictions(net, test_normal_dataset, test_anomaly_dataset, ncols=6):
     plt.savefig('figure/predictions.png')
 
 def plot_losses(normal_losses, anomaly_losses, threshold):
-    plt.figure(figsize=(8, 5))
+    plt.figure(figsize=(5, 3))
 
     plt.hist(normal_losses, bins=50, rwidth=0.9, color=COLORS_PALETTE[0], alpha=0.8)
     plt.hist(anomaly_losses, bins=50, rwidth=0.9, color=COLORS_PALETTE[1], alpha=0.8)
@@ -48,7 +48,7 @@ def plot_losses(normal_losses, anomaly_losses, threshold):
     plt.ylabel('Count')
     plt.grid(True, linestyle='--')
     plt.title('Prediction losses for normal and anomaly heartbeat.')
-    plt.savefig('figure/reconstruction_error.png')
+    plt.savefig('figure/reconstruction_error.png', dpi=100)
 
 def predict(net, dataset):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

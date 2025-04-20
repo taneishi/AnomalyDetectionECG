@@ -45,9 +45,8 @@ A histogram of the reconstruction errors obtained as a result of the prediction 
 
 **Figure 1. A histogram of the reconstruction errors in predictions.**
 
-For the threshold value, we used 26.834 that separates the validation set by 98.5%. The dashed line in the figure indicates the threshold value.
-It can be seen that normal and abnormal patterns are well discriminated.
-The precision of anomaly detection was 0.998, and recall was 0.992.
+For the threshold value, we used 26.8 that separates the validation set by 98.5%. The dashed line in the figure indicates the threshold value.
+It can be seen that normal and abnormal patterns are well discriminated. The *precision* of anomaly detection was 0.998, and *recall* was 0.992.
 
 Since we want to avoid overlooking abonrmalities in health checks, it may be considered to define the threshold value to make the recall higher.
 
