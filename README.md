@@ -1,4 +1,4 @@
-# Anomaly Detection on Electrocardiogram using LSTM Autoencoder
+# Anomaly Detection on Electrocardiogram
 
 ## Introduction
 
@@ -10,7 +10,7 @@ This example is based on [*Time Series Anomaly Detection using LSTM Autoencoders
 
 The `ECG5000` is a *time series* dataset which contains 5,000 sequences with 140 timesteps, including actual cases of patients with cardiac diseases[^ECG5000].
 In particular, the number of features is 1 for basic ECG data.
-The original dataset was divided into two parts, training and test, but we combined and shuffled these two parts into one dataset.
+The original dataset is divided into two parts, training and test, but we combine and shuffle these two parts into one dataset.
 Then we split the dataset into 85%, 10%, and 5% for training, validation, and test.
 
 Each sequence corresponds to a single heartbeat from a single patient.
@@ -46,7 +46,7 @@ A histogram of the reconstruction errors obtained as a result of the prediction 
 **Figure 1. A histogram of the reconstruction errors in predictions.**
 
 For the threshold value, we used 26.8 that separates the validation set by 98.5%. The dashed line in the figure indicates the threshold value.
-It can be seen that normal and abnormal patterns are well discriminated. The *precision* of anomaly detection was 0.998, and *recall* was 0.992.
+It can be seen that normal and abnormal patterns are well discriminated. The *precision* of anomaly detection is 0.998, and *recall* is 0.992.
 
 Since we want to avoid overlooking abonrmalities in health checks, it may be considered to define the threshold value to make the recall higher.
 
