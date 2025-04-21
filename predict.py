@@ -36,7 +36,7 @@ def plot_predictions(net, test_normal_dataset, test_anomaly_dataset, ncols=6):
     plt.savefig('figure/predictions.png')
 
 def plot_losses(normal_losses, anomaly_losses, threshold):
-    plt.figure(figsize=(5, 4))
+    plt.figure(figsize=(6, 4))
 
     plt.hist(normal_losses, bins=50, rwidth=0.9, color=COLORS_PALETTE[0], alpha=0.8)
     plt.hist(anomaly_losses, bins=50, rwidth=0.9, color=COLORS_PALETTE[1], alpha=0.8)
